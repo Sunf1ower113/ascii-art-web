@@ -1,0 +1,77 @@
+{{ define "content" }}
+<div class="base-container">
+  <h1>Welcome</h1>
+  <h2>to</h2>
+  <h3>ascii art web STYLIZE</h3>
+
+  <div class="hero">
+    <div class="hero_left">
+      <form action="/ascii-art" method="POST">
+        <textarea
+          class="textareain"
+          type="text"
+          name="plaintext"
+          id="plaintext"
+          placeholder="Enter something..."
+          required
+        ></textarea>
+        <div class="row">
+          <!-- <input class="submit_button" type="submit" id="submit" value="Submit" > -->
+
+          <div class="col centered gap">
+            <div class="font_style">CHOOSE A FONT STYLE</div>
+
+            <div class="radio-group">
+              <div>
+                <input
+                  type="radio"
+                  id="standard"
+                  name="fonts"
+                  value="standard"
+                  checked
+                />
+                <label for="standard">Standard</label>
+              </div>
+              <div>
+                <input type="radio" id="shadow" name="fonts" value="shadow" />
+                <label for="shadow">Shadow</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="thinkertoy"
+                  name="fonts"
+                  value="thinkertoy"
+                />
+                <label for="thinkertoy">Thinkertoy</label>
+              </div>
+            </div>
+
+            <div
+              class="cool_button"
+              id="submit"
+              value="Submit"
+              onClick="javascript:if ((document.querySelector('textarea').value.length>0) && (document.querySelector('textarea').value.length<400)){document.forms[0].submit()}else{document.querySelector('textarea').classList.toggle('submit-error');setTimeout(()=>{document.querySelector('textarea').classList.toggle('submit-error');},3000)};"
+            >
+              <a href="#" class="button">
+                <div class="button__line"></div>
+                <div class="button__line"></div>
+                <span class="button__text">Submit</span>
+                <div class="button__drow1"></div>
+                <div class="button__drow2"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="splitter"></div>
+    <div class="result">
+      <div>
+        <h2>ASCII RESULT</h2>
+        <div class="ascii">{{template "ascii" .}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}

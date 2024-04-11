@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "chawp";
+  src: url("/static/fonts/chawp.otf");
+}
+@font-face {
+  font-family: "FrederickatheGreat-Regular";
+  src: url("/static/fonts/FrederickatheGreat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "EraserDust";
+  src: url("/static/fonts/EraserDust.ttf");
+}
+
+.error {
+  font-family: "chawp";
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10%;
+  margin-bottom: 6%;
+}
+
+.error-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

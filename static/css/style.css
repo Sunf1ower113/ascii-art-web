@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "chawp";
+  src: url("/static/fonts/chawp.otf");
+}
+
+@font-face {
+  font-family: "FrederickatheGreat-Regular";
+  src: url("/static/fonts/FrederickatheGreat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "EraserDust";
+  src: url("/static/fonts/EraserDust.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* BASE */
+
+body {
+  background: #333
+    url(https://static.tumblr.com/maopbtg/a5emgtoju/inflicted.png) repeat;
+}
+
+.base-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.499);
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col.rev {
+  flex-direction: column-reverse;
+}
+
+.col.centered {
+  align-items: center;
+}
+
+.col.gap {
+  gap: 27px;
+  padding-top: 32px;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  max-width: 3840px;
+  margin: 0px auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero_left {
+  width: 100%;
+}
+
+.hero_left form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splitter {
+  /* min-width: 15px; */
+  width: 15px;
+  height: 800px;
+  background-color: #ffffff;
+  border: 0, 5px solid #9a929e;
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* TEXT */
+
+h1 {
+  font-family: "FrederickatheGreat-Regular";
+  font-size: 90px;
+  text-align: center;
+  color: #fdf1fd;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: "chawp";
+  font-size: 30px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-family: "EraserDust";
+  font-size: 60px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+.font_style {
+  font-family: "EraserDust";
+  font-size: 30px;
+  text-align: center;
+  color: #fdf1fd;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* TEXAREA */
+
+.textareain {
+  overflow: auto;
+  width: 700px;
+  min-width: 300px;
+  background-color: #fff;
+  color: #222;
+  font-family: Courier, monospace;
+  font-weight: normal;
+  font-size: 24px;
+  resize: none;
+  line-height: 40px;
+  padding-left: 100px;
+  /* padding-right: 100px; */
+  padding-top: 45px;
+  padding-bottom: 34px;
+  background-repeat: repeat-y, repeat;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 2px 14px #000;
+  box-shadow: 0px 2px 14px #000;
+  border-top: 1px solid #fff;
+  height: 195px;
+  background-image: url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png),
+    url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+}
+.textareain.submit-error {
+  color: red;
+}
+.textareain.submit-error::placeholder {
+  color: red;
+}
+
+/* ASCII RESULT */
+
+.result {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+}
+
+.ascii {
+  overflow: auto;
+  margin-top: 50px;
+  max-width: 1000px;
+  max-height: 700px;
+}
+
+@media only screen and (max-width: 2800px) {
+  .ascii {
+    max-width: 900px;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .ascii {
+    max-width: 700px;
+  }
+}
+
+@media only screen and (max-width: 1561px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* max-height: 100%; */
+  }
+
+  .textareain {
+    margin-top: 90px;
+    margin-bottom: 10px;
+  }
+
+  .result {
+    width: 90vw;
+  }
+
+  .splitter {
+    margin-top: 100px;
+    /* margin-bottom: 20px; */
+    width: 800px;
+    height: 15px;
+    display: block;
+  }
+
+  .ascii {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .textareain {
+    width: 85vw;
+  }
+
+  .splitter {
+    width: 90vw;
+  }
+
+  /* .ascii {
+    max-width: 500px;
+  } */
+}
+
+@media only screen and (max-width: 550px) {
+  .textareain {
+    transition: 1s;
+    /* max-width: max-content; */
+    background-position-x: -75px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 70px;
+  }
+  .container {
+    font-size: 15px;
+  }
+}
